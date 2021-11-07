@@ -1,0 +1,29 @@
+{
+  "name": "cheak",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sibir-9k/Checkinator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sibir-9k/Checkinator/issues"
+  },
+  "homepage": "https://github.com/sibir-9k/Checkinator#readme",
+  "dependencies": {
+    "busboy": "^0.3.1",
+    "crypto": "^1.0.1",
+    "curl": "^0.1.4",
+    "express": "^4.17.1",
+    "node-rsa": "^1.1.1"
+  }
+}
