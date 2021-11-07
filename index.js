@@ -4,6 +4,7 @@ const Busboy = require('busboy');
 
 const Router = x.Router();
 const PORT = 10001;
+const hh = {'Content-Type': 'text/html; charset=utf-8'}
 
 const { log } = console;
 const app = x();
@@ -37,7 +38,9 @@ Router
     req.pipe(boy);
 
   });
+
 app
+  .use((r, rs, n) => rs.status(200).set(hh) && n())
   .use('/', Router)
   .use(({ res: r }) => r.status(404).send('Пока нет!'))
   .use((e, r, rs, n) => rs.status(500).send(`Ошибка: ${e}`))
